@@ -7,6 +7,8 @@ public class XRControllerInputHandler : MonoBehaviour
 {
     [SerializeField] private InputActionProperty m_Move;
 
+    [SerializeField] private InputActionProperty m_Jump;
+
     private void Awake()
     {
         Register();
@@ -16,6 +18,8 @@ public class XRControllerInputHandler : MonoBehaviour
     {
         m_Move.action.performed += OnMoveEvent;
         m_Move.action.canceled += OnMoveCancelEvent;
+
+        m_Jump.action.performed += OnJumingEvent;
     }
 
     /// <summary>
@@ -34,5 +38,10 @@ public class XRControllerInputHandler : MonoBehaviour
     private void OnMoveCancelEvent(InputAction.CallbackContext context)
     {
         CatAnimationController.Get().Idle();
+    }
+
+    private void OnJumingEvent(InputAction.CallbackContext context)
+    {
+        Debug.Log("Jumping");
     }
 }

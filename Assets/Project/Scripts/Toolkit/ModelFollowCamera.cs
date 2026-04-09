@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class ModelFollowCameraXZ : MonoBehaviour
+public class ModelFollowCameraXZ : Singleton<ModelFollowCameraXZ>
 {
     public Transform cameraTransform;   // 相机（由你的输入脚本控制）
     public Vector3 localOffset;         // 相机在模型局部坐标系中的固定位置
+
+    private bool m_OpenSynchronizeYAxis = false;
 
     void LateUpdate()
     {
@@ -18,6 +20,11 @@ public class ModelFollowCameraXZ : MonoBehaviour
         Vector3 targetPos = cameraTransform.position - worldOffset;
 
         // 4. 只更新X和Z，保留模型原有的Y坐标
-        transform.position = new Vector3(targetPos.x, transform.position.y, targetPos.z);
+        transform.position = new Vector3(targetPos.x, targetPos.y, targetPos.z);
+    }
+
+    public void SynchronizeYAxisData()
+    {
+
     }
 }

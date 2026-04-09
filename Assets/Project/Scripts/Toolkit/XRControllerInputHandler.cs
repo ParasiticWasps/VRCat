@@ -14,12 +14,20 @@ public class XRControllerInputHandler : MonoBehaviour
         Register();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnJumpingEvent(new InputAction.CallbackContext());
+        }
+    }
+
     private void Register()
     {
         m_Move.action.performed += OnMoveEvent;
         m_Move.action.canceled += OnMoveCancelEvent;
 
-        m_Jump.action.performed += OnJumingEvent;
+        m_Jump.action.performed += OnJumpingEvent;
     }
 
     /// <summary>
@@ -40,8 +48,9 @@ public class XRControllerInputHandler : MonoBehaviour
         CatAnimationController.Get().Idle();
     }
 
-    private void OnJumingEvent(InputAction.CallbackContext context)
+    private void OnJumpingEvent(InputAction.CallbackContext context)
     {
-        Debug.Log("Jumping");
+        PlayerController.Get().Jump();
+        CatAnimationController.Get().Jumping();
     }
 }

@@ -10,7 +10,7 @@ public class TeleportTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("TeleportTrigger: OnTriggerEnter");
-            //SceneManager.LoadSceneAsync("OutSide");
+            FadeController.Get().Cover(3.0f, () => { SceneManager.LoadSceneAsync("OutSide"); });
         }
     }
 }

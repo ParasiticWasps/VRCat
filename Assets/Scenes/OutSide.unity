@@ -34653,8 +34653,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7313654230565545395}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 50.3, y: 0, z: 46.5}
+  m_LocalRotation: {x: -0, y: 0.97517693, z: -0, w: -0.22142702}
+  m_LocalPosition: {x: 42.25, y: 0, z: 48.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34663,7 +34663,7 @@ Transform:
   - {fileID: 3127728406422891833}
   - {fileID: 7696548424249457271}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 205.586, z: 0}
 --- !u!23 &4146705899741543023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38454,7 +38454,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 3475118261464492563, guid: 9f3369e30fbd31f4bb596b1a99babe83,
+  m_ModelPrefab: {fileID: 6288703427491737752, guid: 5493571b7e3f74a47afc6ec1d80fc73e,
     type: 3}
   m_ModelParent: {fileID: 9014170783554749352}
   m_Model: {fileID: 0}
@@ -39185,7 +39185,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8270855663187062767, guid: 1392f805216c47742996d4742c80721c,
+  m_ModelPrefab: {fileID: 6288703427491737752, guid: 5493571b7e3f74a47afc6ec1d80fc73e,
     type: 3}
   m_ModelParent: {fileID: 9014170785089946441}
   m_Model: {fileID: 0}
